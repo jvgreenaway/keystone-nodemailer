@@ -78,7 +78,8 @@ keystone.Email.prototype.send = function (options, callback) {
 				}).join(', '),
 				subject: message.subject,
 				html: message.html,
-				attachments: attachments
+				attachments: attachments,
+				replyTo: options.replyTo
 			};
 
 			if (options.sendPlainText) {
